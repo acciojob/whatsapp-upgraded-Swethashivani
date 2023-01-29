@@ -21,7 +21,7 @@ public class WhatsappService {
         if (users.size() > 2) {
              group = new Group(whatsappRepository.createGroupName(), users.size());
              whatsappRepository.saveGroup(group, users);
-        }else{
+        }else if (users.size() == 2){
             group = new Group(users.get(1).getName(), users.size());
             whatsappRepository.saveGroup(group, users);
         }
