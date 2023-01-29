@@ -40,7 +40,7 @@ public class WhatsappRepository {
             return "SUCCESS";
         }
         else{
-            throw new Exception("User already exist");
+            throw new Exception("User already exists");
         }
     }
 
