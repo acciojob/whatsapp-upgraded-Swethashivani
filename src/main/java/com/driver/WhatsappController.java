@@ -50,7 +50,13 @@ public class WhatsappController {
         // The 'i^th' created message has message id 'i'.
         // Return the message id.
 
-        return whatsappService.createMessage(content);
+
+        try {
+            return whatsappService.createMessage(content);
+        }
+        catch(Exception e){
+            return 0;
+        }
     }
 
     @PutMapping("/send-message")
